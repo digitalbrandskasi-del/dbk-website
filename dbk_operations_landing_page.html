@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DBK Digital Brands Kasi | E-Commerce Growth & Operations</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        dbksky: {
+                            400: '#38bdf8', // Lighter sky blue for dark backgrounds
+                            500: '#0ea5e9', // Primary Sky Blue from logo
+                            600: '#0284c7',
+                        },
+                        dbkred: '#b91c1c', // From slide
+                        dbkorange: '#ea580c' // From slide
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        /* Custom Logo Font Styling */
+        .logo-main {
+            font-weight: 900;
+            letter-spacing: -0.05em;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 antialiased bg-white flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white border-b border-gray-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <div class="flex flex-col justify-center">
+                        <div class="flex items-center">
+                            <span class="logo-main text-5xl text-black">DBK</span>
+                            <i class="fa-solid fa-box-open text-dbksky-500 text-3xl ml-1 mt-2"></i>
+                        </div>
+                        <span class="text-[0.65rem] font-bold tracking-[0.2em] text-black mt-[-4px]">
+                            DIGITAL BRANDS <span class="text-dbksky-500">KASI</span>
+                        </span>
+                        <span class="text-[0.45rem] font-semibold tracking-widest text-gray-500 mt-[2px] uppercase">
+                            E-Commerce Growth & Operations
+                        </span>
+                    </div>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#segments" class="text-gray-600 hover:text-dbksky-500 font-medium transition">Audience</a>
+                    <a href="#how-it-works" class="text-gray-600 hover:text-dbksky-500 font-medium transition">How It Works</a>
+                    <a href="#pricing" class="text-gray-600 hover:text-dbksky-500 font-medium transition">Pricing</a>
+                    <a href="#about" class="text-gray-600 hover:text-dbksky-500 font-medium transition">About Us</a>
+                    <a href="#contact" class="bg-black hover:bg-gray-800 text-white px-6 py-2.5 rounded-full font-semibold transition shadow-lg shadow-black/20">
+                        Join Now
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-900 hover:text-dbksky-500 focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#segments" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-dbksky-500 mobile-link">Audience</a>
+                <a href="#how-it-works" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-dbksky-500 mobile-link">How It Works</a>
+                <a href="#pricing" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-dbksky-500 mobile-link">Pricing</a>
+                <a href="#about" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-dbksky-500 mobile-link">About Us</a>
+                <a href="#contact" class="block px-3 py-3 mt-4 text-center rounded-lg text-base font-bold bg-black text-white hover:bg-gray-800 mobile-link shadow-md">Start Selling Today</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 md:pt-40 md:pb-28 bg-black text-white overflow-hidden relative">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#0ea5e9 1px, transparent 1px); background-size: 30px 30px;"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                
+                <!-- Text Content -->
+                <div class="md:w-1/2 text-center md:text-left">
+                    <div class="inline-block bg-white/10 rounded-full px-4 py-1.5 mb-6 backdrop-blur-sm border border-white/20">
+                        <span class="text-dbksky-400 font-semibold text-sm">📍 Starting in Umlazi, KZN</span>
+                    </div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
+                        Take Your Township Business Online, <span class="text-dbksky-400">Without the Tech Hassle.</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto md:mx-0">
+                        We handle the digital storefront setup, manage your product catalog, and route orders directly to your WhatsApp. You focus on running your business.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                        <a href="#pricing" class="bg-dbksky-500 hover:bg-dbksky-600 text-white text-lg font-bold py-4 px-8 rounded-full shadow-lg shadow-sky-500/40 transition transform hover:-translate-y-1 text-center flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-rocket"></i> Start Selling Today
+                        </a>
+                        <a href="#how-it-works" class="bg-white/10 hover:bg-white/20 text-white border border-white/30 text-lg font-semibold py-4 px-8 rounded-full backdrop-blur-sm transition text-center">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Image/Graphic -->
+                <div class="md:w-1/2 relative w-full max-w-md mx-auto">
+                    <div class="absolute inset-0 bg-dbksky-500 rounded-3xl blur-3xl opacity-20 transform rotate-6 translate-y-6"></div>
+                    <div class="relative bg-white rounded-3xl shadow-2xl p-6 border border-gray-800 transform -rotate-2">
+                        <!-- Mockup Phone -->
+                        <div class="bg-gray-50 rounded-2xl border-4 border-black h-96 overflow-hidden relative shadow-inner">
+                            <!-- Status bar -->
+                            <div class="bg-black text-white text-xs px-4 py-1 flex justify-between">
+                                <span>09:41</span>
+                                <div class="flex gap-1 items-center">
+                                    <i class="fa-solid fa-signal"></i>
+                                    <i class="fa-solid fa-wifi"></i>
+                                    <i class="fa-solid fa-battery-full"></i>
+                                </div>
+                            </div>
+                            <!-- Mock Chat -->
+                            <div class="bg-gray-100 px-4 py-2 border-b border-gray-200 flex items-center gap-3">
+                                <div class="w-8 h-8 bg-black rounded-full flex items-center justify-center text-white">
+                                    <i class="fa-brands fa-whatsapp text-xl text-dbksky-400"></i>
+                                </div>
+                                <span class="font-bold text-black">New Order!</span>
+                            </div>
+                            <div class="p-4 space-y-4 text-sm">
+                                <div class="bg-white p-3 rounded-lg rounded-tl-none shadow-sm inline-block max-w-[85%] border border-gray-200">
+                                    <p class="font-bold text-black mb-1">Order #204</p>
+                                    <p class="text-gray-600 mb-2">Customer: Sipho M.</p>
+                                    <ul class="text-gray-700 space-y-1 mb-2">
+                                        <li>1x Fresh Produce Combo</li>
+                                        <li>2x Loaves of Bread</li>
+                                    </ul>
+                                    <p class="font-bold text-dbksky-600 border-t border-gray-100 pt-2 mt-2">Total: R180.00</p>
+                                </div>
+                                <div class="bg-dbksky-100 p-3 rounded-lg rounded-tr-none shadow-sm inline-block self-end float-right text-black font-medium">
+                                    Order confirmed! Preparing now. ✅
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Target Customer Segments (From Pitch Slide) -->
+    <section id="segments" class="py-16 md:py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-dbkred mb-10 border-b-2 border-dbkred inline-block pb-2">Target Customer Segments</h2>
+            
+            <div class="flex flex-col lg:flex-row shadow-2xl rounded-lg overflow-hidden bg-white min-h-[400px]">
+                
+                <!-- Primary Segment (Red) -->
+                <div class="lg:w-1/3 bg-dbkred text-white p-8 md:p-12 flex flex-col justify-center relative">
+                    <div class="absolute top-0 right-0 p-4 opacity-10">
+                        <i class="fa-solid fa-bullseye text-6xl"></i>
+                    </div>
+                    <div class="bg-black/20 inline-block px-3 py-1 font-bold tracking-wider uppercase text-sm mb-4 w-max">Primary</div>
+                    <p class="text-xl md:text-2xl font-semibold leading-relaxed relative z-10">
+                        Informal micro-vendors and small business owners in KZN townships lacking e-commerce capabilities.
+                    </p>
+                </div>
+
+                <!-- Center Image (Market/Township Representation) -->
+                <div class="lg:w-1/3 min-h-[300px] lg:min-h-full relative bg-gray-200">
+                    <!-- Placeholder using placehold.co to represent the community image from slide -->
+                    <img src="https://placehold.co/600x800/d1d5db/4b5563?text=Township+Market+Community" 
+                         alt="Township Market Community" 
+                         class="absolute inset-0 w-full h-full object-cover">
+                    <!-- Subtle overlay matching slide style -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                </div>
+
+                <!-- Secondary Segment (Orange) -->
+                <div class="lg:w-1/3 bg-dbkorange text-white p-8 md:p-12 flex flex-col justify-center relative">
+                    <div class="absolute top-0 right-0 p-4 opacity-10">
+                        <i class="fa-solid fa-store text-6xl"></i>
+                    </div>
+                    <div class="bg-black/20 inline-block px-3 py-1 font-bold tracking-wider uppercase text-sm mb-4 w-max">Secondary</div>
+                    <p class="text-xl md:text-2xl font-semibold leading-relaxed relative z-10">
+                        Existing small and local businesses struggling to manage their digital storefronts.
+                    </p>
+                </div>
+
+            </div>
+            
+            <!-- Slide bottom accent bar -->
+            <div class="h-2 w-full bg-gradient-to-r from-dbkorange to-dbkred rounded-full mt-8 opacity-80"></div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-dbksky-500 font-bold uppercase tracking-wider text-sm mb-2">Simple Process</h2>
+                <h3 class="text-3xl md:text-4xl font-extrabold text-black mb-4">How DBK Operations Works</h3>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">We provide a fully managed support hub. You don't need technical skills or a laptop to join the digital economy.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Step 1 -->
+                <div class="bg-gray-50 rounded-2xl p-8 text-center shadow-sm hover:shadow-xl transition duration-300 border border-gray-100 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-gray-200 rounded-bl-full -z-10 transition-transform group-hover:scale-110"></div>
+                    <div class="w-20 h-20 bg-black rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg transform rotate-3 group-hover:rotate-0 transition">
+                        <i class="fa-solid fa-store text-3xl text-dbksky-400"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">1. We Set Up Your Store</h4>
+                    <p class="text-gray-600">Our field agents visit you, take professional photos of your stock, and build your digital storefront from scratch. No tech required.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-gray-50 rounded-2xl p-8 text-center shadow-sm hover:shadow-xl transition duration-300 border border-gray-100 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-dbksky-100 rounded-bl-full -z-10 transition-transform group-hover:scale-110"></div>
+                    <div class="w-20 h-20 bg-black rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg transform -rotate-3 group-hover:rotate-0 transition">
+                        <i class="fa-solid fa-boxes-stacked text-3xl text-dbksky-400"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">2. We Manage Your Catalog</h4>
+                    <p class="text-gray-600">Got new stock or price changes? Just send us a quick voice note or message. Our central hub updates your inventory instantly.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-gray-50 rounded-2xl p-8 text-center shadow-sm hover:shadow-xl transition duration-300 border border-gray-100 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-gray-200 rounded-bl-full -z-10 transition-transform group-hover:scale-110"></div>
+                    <div class="w-20 h-20 bg-black rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg transform rotate-3 group-hover:rotate-0 transition">
+                        <i class="fa-brands fa-whatsapp text-4xl text-dbksky-400"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">3. You Get WhatsApp Orders</h4>
+                    <p class="text-gray-600">Customers browse online, but orders are routed directly to your WhatsApp. Accept orders and serve your community easily.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
+                
+                <div class="lg:w-1/2">
+                    <h2 class="text-dbksky-500 font-bold uppercase tracking-wider text-sm mb-2">Transparent Pricing</h2>
+                    <h3 class="text-3xl md:text-4xl font-extrabold text-black mb-6">Built for Township Micro-Vendors</h3>
+                    <p class="text-lg text-gray-600 mb-6">
+                        Traditional platforms charge high monthly fees whether you make sales or not. That doesn't work for informal trade. 
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8">
+                        Our model minimizes your risk: you only pay when your business makes money.
+                    </p>
+                    
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3 text-gray-800 font-medium">
+                            <i class="fa-solid fa-circle-check text-dbksky-500 text-xl"></i> No hidden monthly subscription fees
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-800 font-medium">
+                            <i class="fa-solid fa-circle-check text-dbksky-500 text-xl"></i> No expensive hardware needed
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-800 font-medium">
+                            <i class="fa-solid fa-circle-check text-dbksky-500 text-xl"></i> Dedicated agent support
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Pricing Card -->
+                <div class="lg:w-5/12 w-full">
+                    <div class="bg-white rounded-3xl shadow-2xl overflow-hidden border-2 border-black relative">
+                        <!-- Popular Tag -->
+                        <div class="bg-black text-dbksky-400 text-center py-2 font-bold uppercase text-sm tracking-widest">
+                            Zero Risk Model
+                        </div>
+                        
+                        <div class="p-8 md:p-10">
+                            <div class="text-center mb-8 border-b border-gray-100 pb-8">
+                                <p class="text-gray-500 font-semibold mb-2">Commission per Sale</p>
+                                <div class="flex justify-center items-baseline text-black">
+                                    <span class="text-6xl font-extrabold">8%</span>
+                                </div>
+                                <p class="text-sm text-gray-500 mt-2">Only pay when an order is completed.</p>
+                            </div>
+
+                            <div class="mb-8">
+                                <p class="text-gray-500 font-semibold mb-2 text-center">Plus</p>
+                                <div class="bg-gray-50 rounded-xl p-4 flex items-center justify-between border border-gray-200">
+                                    <span class="font-bold text-black">Once-off Setup Fee</span>
+                                    <span class="font-extrabold text-xl text-dbksky-500">R300</span>
+                                </div>
+                                <p class="text-xs text-center text-gray-500 mt-2">Covers photography, storefront creation & catalog entry.</p>
+                            </div>
+
+                            <a href="#contact" class="block w-full bg-dbksky-500 hover:bg-dbksky-600 text-white text-center font-bold py-4 rounded-xl transition duration-300 shadow-md">
+                                Sign Up My Business
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-20 bg-black text-white relative overflow-hidden">
+        <!-- Abstract Shapes -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 rounded-full bg-gray-800 opacity-50 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-dbksky-600 opacity-20 blur-3xl"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h2 class="text-dbksky-400 font-bold uppercase tracking-wider text-sm mb-2">Our Foundation</h2>
+            <h3 class="text-3xl md:text-4xl font-extrabold mb-8">Rooted in Accountability & Growth</h3>
+            
+            <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-12 leading-relaxed">
+                DBK Digital Brands Kasi was born from a deep understanding of township retail challenges and rigorous financial discipline. We aren't just tech enthusiasts; we are trained accountants dedicated to creating sustainable, profitable models for informal traders.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <!-- Bulelwa -->
+                <div class="bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/10 hover:border-dbksky-500 transition">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 text-black text-2xl font-bold">B</div>
+                    <h4 class="text-lg font-bold">Bulelwa</h4>
+                    <p class="text-dbksky-400 text-sm font-semibold mb-2">CEO</p>
+                    <p class="text-sm text-gray-400">Diploma in Accounting, MUT</p>
+                </div>
+                
+                <!-- Kwandokuhle -->
+                <div class="bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/10 hover:border-dbksky-500 transition">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 text-black text-2xl font-bold">K</div>
+                    <h4 class="text-lg font-bold">Kwandokuhle</h4>
+                    <p class="text-dbksky-400 text-sm font-semibold mb-2">CFO</p>
+                    <p class="text-sm text-gray-400">Diploma in Accounting, MUT</p>
+                </div>
+
+                <!-- Davis -->
+                <div class="bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/10 hover:border-dbksky-500 transition">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 text-black text-2xl font-bold">D</div>
+                    <h4 class="text-lg font-bold">Davis</h4>
+                    <p class="text-dbksky-400 text-sm font-semibold mb-2">Operations Lead</p>
+                    <p class="text-sm text-gray-400">Diploma in Accounting, MUT</p>
+                </div>
+            </div>
+            
+            <div class="mt-12 inline-flex items-center gap-3 bg-white/5 rounded-full px-6 py-2 border border-white/10">
+                <i class="fa-solid fa-graduation-cap text-dbksky-400 text-xl"></i>
+                <span class="text-gray-300 text-sm">Proud Alumni of Mangosuthu University of Technology</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action / Contact -->
+    <section id="contact" class="py-20 bg-white text-center border-t border-gray-100">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-black mb-6">Ready to Expand Your Customer Base?</h2>
+            <p class="text-lg text-gray-600 mb-10">
+                Join our pilot program in Umlazi today. Let us handle the tech while you serve your community.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="https://wa.me/27000000000" target="_blank" class="bg-black hover:bg-gray-800 text-white font-bold py-4 px-8 rounded-full shadow-lg transition duration-300 flex items-center justify-center gap-3 text-lg">
+                    <i class="fa-brands fa-whatsapp text-2xl text-dbksky-400"></i> Message Us on WhatsApp
+                </a>
+                <a href="https://www.instagram.com/digital_brandkasi" target="_blank" class="bg-gray-100 hover:bg-gray-200 text-black border border-gray-200 font-bold py-4 px-8 rounded-full shadow-sm transition duration-300 flex items-center justify-center gap-3 text-lg">
+                    <i class="fa-brands fa-instagram text-2xl text-pink-600"></i> Follow @digital_brandkasi
+                </a>
+            </div>
+            <p class="text-sm text-gray-400 mt-6">No email or complex forms required. We communicate where you are.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-gray-300 py-12 mt-auto border-t-4 border-dbksky-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Brand -->
+                <div>
+                    <div class="flex flex-col mb-4">
+                        <span class="font-bold text-2xl text-white tracking-tight logo-main">DBK</span>
+                        <span class="text-[0.6rem] font-bold tracking-[0.1em] text-white mt-[-4px]">
+                            DIGITAL BRANDS <span class="text-dbksky-500">KASI</span>
+                        </span>
+                    </div>
+                    <p class="text-gray-400 text-sm">
+                        Bridging the digital divide for township micro-vendors through hands-on managed e-commerce support.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#segments" class="hover:text-dbksky-400 transition">Target Audience</a></li>
+                        <li><a href="#how-it-works" class="hover:text-dbksky-400 transition">How It Works</a></li>
+                        <li><a href="#pricing" class="hover:text-dbksky-400 transition">Pricing</a></li>
+                        <li><a href="#about" class="hover:text-dbksky-400 transition">About Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Contact & Location</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot mt-1 text-dbksky-500"></i>
+                            <span>Umlazi,<br>Durban, KwaZulu-Natal<br>South Africa</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-brands fa-whatsapp text-dbksky-500"></i>
+                            <span>Available via WhatsApp</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-brands fa-instagram text-dbksky-500"></i>
+                            <a href="https://www.instagram.com/digital_brandkasi" target="_blank" class="hover:text-dbksky-400 transition">@digital_brandkasi</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-10 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-sm text-gray-500">&copy; 2026 DBK Digital Brands Kasi. All rights reserved.</p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-500 hover:text-white transition"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/digital_brandkasi" target="_blank" class="text-gray-500 hover:text-white transition"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="text-gray-500 hover:text-white transition"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Interactivity Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            const links = document.querySelectorAll('.mobile-link');
+            const icon = btn.querySelector('i');
+
+            function toggleMenu() {
+                menu.classList.toggle('hidden');
+                if (menu.classList.contains('hidden')) {
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                } else {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-xmark');
+                }
+            }
+
+            btn.addEventListener('click', toggleMenu);
+
+            // Close menu when a link is clicked
+            links.forEach(link => {
+                link.addEventListener('click', toggleMenu);
+            });
+        });
+    </script>
+</body>
+</html>
